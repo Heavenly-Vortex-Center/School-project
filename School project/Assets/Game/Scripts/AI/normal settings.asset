@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: normal settings
   m_EditorClassIdentifier: 
   _mass: 70
-  _maxDesiredVelocity: 2
-  _maxSteeringForce: 2
-  _maxSpeed: 5
+  _maxDesiredVelocity: 4
+  _maxSteeringForce: 4
+  _maxSpeed: 10
   _lookRange: 14.54
   _SeekingObject:
     serializedVersion: 2
@@ -23,8 +23,8 @@ MonoBehaviour:
   _arriveDistance: 1
   _slowingDistance: 2
   _followPathMode: 0
-  _avoidMaxForce: 0
-  _avoidDistance: 0
+  _avoidMaxForce: 25
+  _avoidDistance: 25
   _avoidLayer: Obstacle
   _lookAheadTime: 0
   _AvoidRange: 0
@@ -32,6 +32,4 @@ MonoBehaviour:
   _wanderCircleRadius: 0
   _wanderNoiseAngle: 0
   _hideOffset: 0
-  _hideLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  _hideLayer: 

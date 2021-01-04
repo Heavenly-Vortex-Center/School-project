@@ -66,7 +66,7 @@ namespace Steering {
                     behaviours.Add(new SeekObject(_target));
                     behaviours.Add(new AvoidObstacle());
                     behaviours.Add(new Idle());
-                    _steering.SetBehaviours(behaviours, "Wander");
+                    _steering.SetBehaviours(behaviours, "Avoid");
                     break;
                 case BehaviourEnum.Hide:
                     behaviours.Add(new Hide(_player));
