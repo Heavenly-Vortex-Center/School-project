@@ -13,7 +13,7 @@ public class SteeringSettings : ScriptableObject {
     public float _maxSpeed = 5.0f;            //max vehicle speed in m/s
 
     [Header("Seek Settings")]
-    public float _lookRange;
+    public float _lookRange = 16.0f;
     public LayerMask _SeekingObject;
 
     [Header("Arrive")]
@@ -25,20 +25,20 @@ public class SteeringSettings : ScriptableObject {
 
     [Header("Avoid obstacle")]
 
-    public float _avoidMaxForce;
-    public float _avoidDistance;
+    public float _avoidMaxForce = 10f;
+    public float _avoidDistance = 15f;
     public string _avoidLayer = "Obstacle";
 
     [Header("Evade and persue")]
-    public float _lookAheadTime;
-    public float _AvoidRange;
+    public float _lookAheadTime = 5f;
+    public float _AvoidRange = 5f;
 
     [Header("Wander")]
-    public float _wanderCirlceDistance;
-    public float _wanderCircleRadius;
-    public float _wanderNoiseAngle;
+    public float _wanderCirlceDistance = 9f;
+    public float _wanderCircleRadius = 20f;
+    public float _wanderNoiseAngle = 18.5f;
 
     //[Header("Hide")]
-    public float _hideOffset;
-    public LayerMask _hideLayer;
+    public float _hideOffset = 1f;
+    public string _hideLayer = "Target";     
 }

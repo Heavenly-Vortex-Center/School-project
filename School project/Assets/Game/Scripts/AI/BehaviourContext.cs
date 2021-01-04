@@ -11,9 +11,9 @@ namespace Steering {
         public SteeringSettings _settings;
 
         public BehaviourContext(Vector3 position, Vector3 velocity, SteeringSettings settings ) {
-           // _position = position;
-            //_velocity = velocity;
-            //_settings = settings; 
+            _position = position;
+            _velocity = velocity;
+            _settings = settings; 
         }     
         
     }
