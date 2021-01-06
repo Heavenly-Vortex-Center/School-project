@@ -10,41 +10,49 @@ namespace Steering {
         public enum HunterState { Idle, Approach, Pursue};
 
         [Header("Target to state")]
-        public Vector3 _target;
+        public GameObject _target;
         public HunterState _state;
         public float _pursueRadius = 7;
         public float _approachRadius = 10;
+        public float _avoidRadius = 2;
 
         [Header("Steering setting")]
         public SteeringSettings _idleSettings;
         public SteeringSettings _approachSettings;
         public SteeringSettings _pursueSettings;
+        public SteeringSettings _avoidSettings;
         [Header("Private")]
         private Steering _steering;
         
         private void Start() {
             _steering = GetComponent<Steering>();
-
+            _target = GameObject.Find("Target");
 
             ToIdle();
         }
         private void FixedUpdate() {
            
-            float distanceToTarget = (_target - transform.position).magnitude;
+            float distanceToTarget = (_target.transform.position - transform.position).magnitude;
+           // Debug.Log(distanceToTarget);
 
             switch (_state) {
                 case HunterState.Idle:
                     if (distanceToTarget < _approachRadius) {
+                        Debug.Log("approach");
                         ToApproach();
                     }
                     break;
                 case HunterState.Approach:
                     if (distanceToTarget > _approachRadius) {
+                        Debug.Log("idle");
                         ToIdle();
+                    } else if (distanceToTarget < _pursueRadius) {
+                        ToPursue();
                     }
                     break;
                 case HunterState.Pursue:
                     if (distanceToTarget > _pursueRadius) {
+                        Debug.Log("pursue");
                         ToPursue();
                     }
                     break;
@@ -83,7 +91,9 @@ namespace Steering {
             return target;
         }
         private void OnDrawGizmos() {
-            Support.DrawWireSphere(transform.position, Color.cyan, _pursueRadius);
+            Support.DrawWireSphere(transform.position, Color.red, _approachRadius);
+            Support.DrawWireSphere(transform.position, Color.cyan, _pursueRadius);              
+            Support.DrawWireSphere(transform.position, Color.black, _avoidRadius);
         }
 
 

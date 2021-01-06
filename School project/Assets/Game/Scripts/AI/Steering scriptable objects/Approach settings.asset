@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 430d543601b99fe4383ab14a6650cdc2, type: 3}
-  m_Name: normal settings
+  m_Name: Approach settings
   m_EditorClassIdentifier: 
   _mass: 70
-  _maxDesiredVelocity: 4
-  _maxSteeringForce: 4
-  _maxSpeed: 10
-  _lookRange: 14.54
+  _maxDesiredVelocity: 2
+  _maxSteeringForce: 2
+  _maxSpeed: 5
+  _lookRange: 16
   _SeekingObject:
     serializedVersion: 2
     m_Bits: 64
   _arriveDistance: 1
   _slowingDistance: 2
   _followPathMode: 0
-  _avoidMaxForce: 25
-  _avoidDistance: 25
+  _avoidMaxForce: 10
+  _avoidDistance: 15
   _avoidLayer: Obstacle
-  _lookAheadTime: 0
-  _AvoidRange: 0
-  _wanderCirlceDistance: 0
-  _wanderCircleRadius: 0
-  _wanderNoiseAngle: 0
-  _hideOffset: 0
-  _hideLayer: 
+  _lookAheadTime: 5
+  _AvoidRange: 5
+  _wanderCirlceDistance: 9
+  _wanderCircleRadius: 20
+  _wanderNoiseAngle: 18.5
+  _hideOffset: 1
+  _hideLayer: Target

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430d543601b99fe4383ab14a6650cdc2, type: 3}
+  m_Name: idle settings
+  m_EditorClassIdentifier: 
+  _mass: 70
+  _maxDesiredVelocity: 2
+  _maxSteeringForce: 2
+  _maxSpeed: 5
+  _lookRange: 16
+  _SeekingObject:
+    serializedVersion: 2
+    m_Bits: 64
+  _arriveDistance: 1
+  _slowingDistance: 2
+  _followPathMode: 0
+  _avoidMaxForce: 10
+  _avoidDistance: 15
+  _avoidLayer: Obstacle
+  _lookAheadTime: 5
+  _AvoidRange: 5
+  _wanderCirlceDistance: 9
+  _wanderCircleRadius: 20
+  _wanderNoiseAngle: 18.5
+  _hideOffset: 1
+  _hideLayer: Target
