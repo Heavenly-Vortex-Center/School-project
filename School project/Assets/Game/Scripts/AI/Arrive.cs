@@ -27,8 +27,8 @@ using UnityEngine;
                 _velocityDesired = (clippedSpeed / distance) * targetOffset;
              else 
                 _velocityDesired = Vector3.zero;
-            return _velocityDesired - context._velocity;
             
+            return _velocityDesired - context._velocity;
 
            
         }

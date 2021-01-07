@@ -20,7 +20,8 @@ MonoBehaviour:
   _SeekingObject:
     serializedVersion: 2
     m_Bits: 64
-  _arriveDistance: 1
+  _arriveDistance: 2
+  _approachDistance: 11.1
   _slowingDistance: 2
   _followPathMode: 0
   _avoidMaxForce: 25
@@ -33,3 +34,11 @@ MonoBehaviour:
   _wanderNoiseAngle: 0
   _hideOffset: 0
   _hideLayer: 
+  _flocklayer: Boids
+  _flockAlignmentWeight: 1
+  _flockCohesionWeight: 1
+  _flockSeparationWeight: 1.5
+  _flockAlignmentRadius: 6
+  _flockCohesionRadius: 6
+  _flockSeparationRadius: 3
+  _flockVisibilityAngle: 90

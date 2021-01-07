@@ -18,6 +18,7 @@ public class SteeringSettings : ScriptableObject {
 
     [Header("Arrive")]
     public float _arriveDistance = 1.0f;
+    public float _approachDistance = 5.0f;
     public float _slowingDistance = 2.0f;
 
     [Header("Follow Path")]
@@ -38,7 +39,21 @@ public class SteeringSettings : ScriptableObject {
     public float _wanderCircleRadius = 20f;
     public float _wanderNoiseAngle = 18.5f;
 
-    //[Header("Hide")]
+    [Header("Hide")]
     public float _hideOffset = 1f;
-    public string _hideLayer = "Target";     
+    public string _hideLayer = "Target";
+
+    [Header("Flocking")]
+    public string _flocklayer = "Boids";
+
+    public float _flockAlignmentWeight = 1.0f;
+    public float _flockCohesionWeight = 1.0f;
+    public float _flockSeparationWeight = 1.5f;
+
+    public float _flockAlignmentRadius = 6.0f;
+    public float _flockCohesionRadius = 6.0f;
+    public float _flockSeparationRadius = 3.0f;
+
+    public float _flockVisibilityAngle = 90.0f;
+
 }

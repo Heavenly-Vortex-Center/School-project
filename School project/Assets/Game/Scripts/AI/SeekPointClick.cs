@@ -11,21 +11,23 @@ namespace Steering {
         //----------------------------------------------------------------------------------------------------------------------//
         public override void start( BehaviourContext context ) {
             base.start(context);
+            context._position = _positionTarget;
+            Debug.Log(context._position);
         }
+
         public override Vector3 CalculateSteeringForce( float dt, BehaviourContext context ) {
             float distance = (_positionTarget - context._position).magnitude;
-            Debug.Log(distance);
             if (Input.GetMouseButtonDown(0)) {
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit)) {
                     _positionTarget = hit.point;
                     _positionTarget.y = context._position.y;
                 }
-            } 
-            if (distance < context._settings._arriveDistance) {
-                _positionTarget = Vector3.zero;
-                Debug.Log("has arrived");
             }
-            _velocityDesired = (_positionTarget - context._position).normalized * context._settings._maxDesiredVelocity;
+            if (distance < context._settings._arriveDistance) 
+                _velocityDesired = Vector3.zero;
+            else 
+                _velocityDesired = (_positionTarget - context._position).normalized * context._settings._maxDesiredVelocity;
+
             return _velocityDesired - context._velocity;
         }
         public override void OnDrawGizmos( BehaviourContext context ) {

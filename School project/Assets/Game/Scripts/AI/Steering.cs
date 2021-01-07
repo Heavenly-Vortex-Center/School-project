@@ -18,7 +18,7 @@ namespace Steering {
         public BehaviourList _behaviours = new BehaviourList();
 
 
-        private void Start() {
+        private void Awake() {
             _position = transform.position;
         }
 
